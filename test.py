@@ -1,6 +1,10 @@
 from flask import Flask, request
-app = Flask(__name__)
+from flask_restful import Resource, Api
 
+app = Flask(__name__)
+api = Api(app)
+
+todos = {}
 
 @app.route('/hello')
 def hello():
