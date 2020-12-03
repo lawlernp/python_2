@@ -6,6 +6,10 @@ app = Flask(__name__)
 def hello():
     return 'Hello, World!'
 
+@app.route('/dic')
+def dic():
+    return {'noise':'Hello, World!'}
+
 @app.route('/')
 def index():
     return 'Index Page'
